@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import DarkToggle from '../components/DarkToggle'
 import Title from '../components/styles/Title'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <DarkToggle />
         <Title>Omar Syx</Title>
       </main>
 
