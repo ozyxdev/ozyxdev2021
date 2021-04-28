@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
+    background: var(--color-background);
+    color: var(--color-text);
   }
 
   *, *::before, *after {
@@ -28,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--color-secondary);
   }
 
   a:hover {
