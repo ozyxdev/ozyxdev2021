@@ -1,6 +1,6 @@
 import Document, { Html, Head, NextScript, Main } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { MagicScriptTag } from '../lib/inlineCSSVariables'
+import { MagicScriptTag } from '../lib/loadThemeVariables'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
