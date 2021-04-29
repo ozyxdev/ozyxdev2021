@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types'
 import Page from '../components/Page'
+import { ThemeProvider } from '../lib/themeState'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Page>
-      <Component {...pageProps} />
-    </Page>
+    <ThemeProvider>
+      <Page>
+        <Component {...pageProps} />
+      </Page>
+    </ThemeProvider>
   )
 }
 

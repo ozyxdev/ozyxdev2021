@@ -1,5 +1,6 @@
 import Document, { Html, Head, NextScript, Main } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { MagicScriptTag } from '../lib/loadThemeVariables'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -18,6 +19,7 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
+          <MagicScriptTag />
           <Main />
           <NextScript />
         </body>
