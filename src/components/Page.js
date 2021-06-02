@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Navigation from './shared/Navigation'
 import GlobalStyles from './styles/GlobalStyles'
 
 const InnerStyles = styled.div`
@@ -10,10 +11,11 @@ const InnerStyles = styled.div`
 
 export default function Page({ children }) {
   return (
-    <div>
+    <>
+      <Navigation />
       <GlobalStyles />
       <InnerStyles>{children}</InnerStyles>
-    </div>
+    </>
   )
 }
 

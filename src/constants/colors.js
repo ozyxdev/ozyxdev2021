@@ -3,6 +3,10 @@ export const COLORS = {
     light: 'hsl(0deg, 0%, 10%)', // white
     dark: 'hsl(0deg, 0%, 100%)', // near-black
   },
+  white: {
+    light: '#f9fafe',
+    dark: '#f9fafe',
+  },
   background: {
     light: 'hsl(0deg, 0%, 100%)', // white
     dark: 'hsl(250deg, 70%, 7%)', // navy navy blue

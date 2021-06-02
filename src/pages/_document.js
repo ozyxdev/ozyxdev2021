@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import Document, { Html, Head, NextScript, Main } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { MagicScriptTag } from '../lib/loadThemeVariables'
+import { FallbackStyles, MagicScriptTag } from '../lib/loadThemeVariables'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
           <meta name="googlebot" content="noindex" />
         </Head>
         <body>
+          <FallbackStyles />
           <MagicScriptTag />
           <Main />
           <NextScript />
