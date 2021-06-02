@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types'
 import Page from '../components/Page'
 import { ThemeProvider } from '../lib/themeState'

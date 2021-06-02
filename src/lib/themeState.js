@@ -5,6 +5,7 @@ import { COLORS, INITIAL_COLOR_MODE_CSS_PROP } from '../constants/colors'
 const LocalStateContext = createContext()
 const LocalStateProvider = LocalStateContext.Provider
 
+// eslint-disable-next-line react/prop-types
 function ThemeProvider({ children }) {
   const [colorMode, rawSetColorMode] = useState(undefined)
 
