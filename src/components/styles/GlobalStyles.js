@@ -10,15 +10,15 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     --max-width: 1000px;
-    font-size: 10px;
+    font-size: 8px;
   }
 
   body {
-    font-family: ---apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: ---apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2;
     background: var(--color-background);
     color: var(--color-text);
@@ -38,7 +38,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    font-family:  ---apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:  ---apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .icon {
+    height: 24px;
+    width: 24px;
   }
 `
 
