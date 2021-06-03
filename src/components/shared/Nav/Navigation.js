@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import MenuIcon from '../icons/MenuIcon'
 import MenuSheet from './MenuSheet'
 import NavItem from './NavItem'
@@ -19,12 +20,22 @@ export default function Navigation() {
   }
   const constraintsRef = useRef(null)
 
+  // close menu on route change
+  const router = useRouter()
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => setMenuOpen(false))
+  }, [])
+
   return (
     <NavContainer ref={constraintsRef}>
-      <MenuSheet menuOpen={menuOpen} setMenuOpen={setMenuOpen}>
+      <MenuSheet
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        toggleMenu={toggleMenu}
+      >
         {mainNavItems.map((item) => (
-          <Link href={item.href}>
-            <MenuSheetItemStyles key={item.id} item={item}>
+          <Link href={item.href} key={item.id}>
+            <MenuSheetItemStyles item={item}>
               <Icon id={item.icon} fill />
               {item.text}
               <Icon id="chevron-right" />

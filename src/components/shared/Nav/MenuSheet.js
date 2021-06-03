@@ -8,7 +8,7 @@ const MenuSheetStyles = styled(motion.div)`
   right: 1rem;
   border-radius: 2rem;
   background: #e2eafc;
-  padding: 2rem 0 15rem 0;
+  padding: 3rem 0 15rem 0;
   z-index: -1;
   position: absolute;
 
@@ -28,7 +28,25 @@ const MenuSheetStyles = styled(motion.div)`
   }
 `
 
-export default function MenuSheet({ setMenuOpen, menuOpen, children }) {
+const MenuSheetBackdrop = styled.div`
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.01);
+  z-index: -1;
+  display: ${(props) => (props.menuOpen ? 'block' : 'none')};
+`
+
+export default function MenuSheet({
+  setMenuOpen,
+  toggleMenu,
+  menuOpen,
+  children,
+}) {
   const sheetRef = useRef(null)
   const [dragStart, setDragStart] = useState(0)
   const [menuSheetHeight, setMenuSheetHeight] = useState(0)
@@ -64,13 +82,16 @@ export default function MenuSheet({ setMenuOpen, menuOpen, children }) {
   }
   return (
     <>
-      <div
-        role="button"
-        tabIndex={0}
-        aria-label="Close menu"
-        className="menu-sheet-backdrop"
+      <MenuSheetBackdrop
+        // role="button"
+        // tabIndex={0}
+        // aria-label="Close menu"
+        // className="menu-sheet-backdrop"
+        menuOpen={menuOpen}
+        onClick={toggleMenu}
       />
       <MenuSheetStyles
+        onClick={toggleMenu}
         initial="close"
         animate={menuOpen ? 'open' : 'close'}
         variants={menuSheetVariants}

@@ -36,7 +36,7 @@ const mobileNavItems = [
     id: 'about',
     text: 'About',
     icon: 'about',
-    href: '/',
+    href: '/about',
   },
   {
     id: 'home',
@@ -48,7 +48,7 @@ const mobileNavItems = [
     id: 'projects',
     text: 'projects',
     icon: 'project',
-    href: '/',
+    href: '/projects',
   },
 ]
 
