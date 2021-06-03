@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import DarkToggle from '../components/DarkToggle'
+import LinkCTA from '../components/shared/LinkCTA'
 import Title from '../components/styles/Title'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <DarkToggle />
         <Title>Omar Syx</Title>
+        <LinkCTA>Get in touch</LinkCTA>
       </main>
 
       <footer />

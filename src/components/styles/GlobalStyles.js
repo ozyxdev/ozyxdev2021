@@ -30,11 +30,12 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    cursor: pointer;
     color: var(--color-secondary);
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   button {
