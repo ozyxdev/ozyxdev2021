@@ -18,9 +18,6 @@ export default class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
           <link rel="icon" href="/favicon.svg" />
-          {/* IMPORTANT: REMOVE BEFORE LAUCH */}
-          <meta name="robots" content="noindex" />
-          <meta name="googlebot" content="noindex" />
         </Head>
         <body>
           <FallbackStyles />
