@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/favicon.svg" />
         </Head>
         <body>
           <FallbackStyles />
