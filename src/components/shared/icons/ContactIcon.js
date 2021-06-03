@@ -1,4 +1,4 @@
-export default function AboutIcon({ fill }) {
+export default function ContactIcon({ fill }) {
   return (
     <>
       {fill ? (
@@ -9,7 +9,7 @@ export default function AboutIcon({ fill }) {
           height="24"
         >
           <path fill="none" d="M0 0h24v24H0z" />
-          <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 12a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0H7z" />
+          <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" />
         </svg>
       ) : (
         <svg
@@ -19,7 +19,7 @@ export default function AboutIcon({ fill }) {
           height="24"
         >
           <path fill="none" d="M0 0h24v24H0z" />
-          <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-5-8h2a3 3 0 0 0 6 0h2a5 5 0 0 1-10 0z" />
+          <path d="M1.923 9.37c-.51-.205-.504-.51.034-.689l19.086-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.475.553-.717.07L11 13 1.923 9.37zm4.89-.2l5.636 2.255 3.04 6.082 3.546-12.41L6.812 9.17z" />
         </svg>
       )}
     </>

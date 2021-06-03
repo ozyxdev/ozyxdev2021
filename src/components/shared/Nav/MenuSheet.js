@@ -8,7 +8,7 @@ const MenuSheetStyles = styled(motion.div)`
   right: 1rem;
   border-radius: 2rem;
   background: #e2eafc;
-  padding: 0.5rem 2rem 15rem 2rem;
+  padding: 2rem 0 15rem 0;
   z-index: -1;
   position: absolute;
 

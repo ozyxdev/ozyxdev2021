@@ -1,25 +1,15 @@
 import { useRef, useState } from 'react'
+import Link from 'next/link'
 import MenuIcon from '../icons/MenuIcon'
 import MenuSheet from './MenuSheet'
 import NavItem from './NavItem'
 import { NavContainer, NavStyles, NavIemStyles } from './styles/NavStyles'
-
-// eslint-disable-next-line react/display-name
-
-const navItems = [
-  {
-    id: 'home',
-    path: '/',
-  },
-  {
-    id: 'about',
-    path: '/',
-  },
-  {
-    id: 'projects',
-    path: '/',
-  },
-]
+import {
+  mobileNavItems,
+  mainNavItems,
+} from '../../../constants/navigation-constants'
+import MenuSheetItemStyles from './styles/MenuSheetStyles'
+import Icon from '../Icon'
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(true)
@@ -32,14 +22,18 @@ export default function Navigation() {
   return (
     <NavContainer ref={constraintsRef}>
       <MenuSheet menuOpen={menuOpen} setMenuOpen={setMenuOpen}>
-        <p>About</p>
-        <p>About</p>
-        <p>About</p>
-        <p>About</p>
-        <p>About</p>
+        {mainNavItems.map((item) => (
+          <Link href={item.href}>
+            <MenuSheetItemStyles key={item.id} item={item}>
+              <Icon id={item.icon} fill />
+              {item.text}
+              <Icon id="chevron-right" />
+            </MenuSheetItemStyles>
+          </Link>
+        ))}
       </MenuSheet>
       <NavStyles>
-        {navItems.map((item) => (
+        {mobileNavItems.map((item) => (
           <NavItem item={item} key={item.id} />
         ))}
         <NavIemStyles onClick={toggleMenu}>
