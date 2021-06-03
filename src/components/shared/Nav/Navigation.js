@@ -24,7 +24,7 @@ export default function Navigation() {
   const router = useRouter()
   useEffect(() => {
     router.events.on('routeChangeStart', () => setMenuOpen(false))
-  }, [])
+  })
 
   return (
     <NavContainer ref={constraintsRef}>
