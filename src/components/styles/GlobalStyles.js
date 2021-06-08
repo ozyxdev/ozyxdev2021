@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     color: var(--color-text);
   }
 
-  *, *::before, *after {
+  *, *::before, *::after {
     box-sizing: inherit;
   }
 
