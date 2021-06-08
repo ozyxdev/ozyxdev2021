@@ -26,6 +26,12 @@ export default function Navigation() {
     router.events.on('routeChangeStart', () => setMenuOpen(false))
   })
 
+  useEffect(() => {
+    setTimeout(() => {
+      setMenuOpen(false)
+    }, 1000)
+  })
+
   return (
     <NavContainer ref={constraintsRef}>
       <MenuSheet
