@@ -14,6 +14,7 @@ import Icon from '../Icon'
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(true)
+  const [loaded, setLoaded] = useState(false)
 
   const toggleMenu = (_e) => {
     setMenuOpen(!menuOpen)
@@ -28,7 +29,10 @@ export default function Navigation() {
 
   useEffect(() => {
     setTimeout(() => {
-      setMenuOpen(false)
+      if (!loaded) {
+        setMenuOpen(false)
+        setLoaded(true)
+      }
     }, 1000)
   })
 
