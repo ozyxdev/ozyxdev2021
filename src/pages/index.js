@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import DarkToggle from '../components/DarkToggle'
-import CardSwipe from '../components/shared/CardSwipe'
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
 
       <main>
         <DarkToggle />
-        <CardSwipe />
       </main>
 
       <footer />
