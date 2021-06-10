@@ -2,16 +2,16 @@ import styled from 'styled-components'
 
 const MenuSheetItemStyles = styled.div`
   padding: 1rem 3rem;
-  color: #173782;
+  color: var(--color-text);
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   align-items: center;
   text-transform: capitalize;
+  font-weight: 600;
   svg {
-    fill: #abc4ff;
+    fill: var(--color-accent);
   }
-  /* border-bottom: 0.1px solid #abc4ff; */
 `
 
 export default MenuSheetItemStyles

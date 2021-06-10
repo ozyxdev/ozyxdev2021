@@ -5,11 +5,9 @@ const NavContainer = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background: white;
-  border-top: 1px solid #f9fafe;
 
   .menu-sheet-backdrop {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--color-transparent);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -18,17 +16,25 @@ const NavContainer = styled.div`
     z-index: -1;
     display: ${(props) => (props.menuOpen ? 'block' : 'none')};
   }
+
+  .controller-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 3rem 1rem;
+  }
 `
 
 const NavStyles = styled.nav`
   max-width: var(--max-width);
-  background: white;
+  background: var(--color-navigation);
   margin: 0 auto;
   padding: 2rem;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
+  z-index: var(--nav-z-index);
+  box-shadow: var(--nav-drop-shadow);
 `
 
 const NavIemStyles = styled.a`
@@ -41,14 +47,15 @@ const NavIemStyles = styled.a`
   }
 
   svg {
-    fill: #212d40;
+    fill: var(--color-text);
     height: 2rem;
   }
 
   span {
-    color: #212d40;
+    color: var(--color-text);
     font-size: 1.5rem;
     text-transform: capitalize;
+    font-weight: 500;
   }
 `
 

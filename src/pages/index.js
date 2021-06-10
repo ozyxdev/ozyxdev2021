@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import DarkToggle from '../components/DarkToggle'
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <DarkToggle />
+        <h1>Home</h1>
       </main>
 
       <footer />
