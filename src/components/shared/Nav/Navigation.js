@@ -11,6 +11,7 @@ import {
 } from '../../../constants/navigation-constants'
 import MenuSheetItemStyles from './styles/MenuSheetStyles'
 import Icon from '../Icon'
+import DarkModeToggle from '../DarkModeToggle'
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(true)
@@ -28,10 +29,10 @@ export default function Navigation() {
   })
 
   useEffect(() => {
+    setLoaded(true)
     setTimeout(() => {
       if (!loaded) {
         setMenuOpen(false)
-        setLoaded(true)
       }
     }, 1000)
   })
@@ -43,6 +44,9 @@ export default function Navigation() {
         setMenuOpen={setMenuOpen}
         toggleMenu={toggleMenu}
       >
+        <div className="controller-container">
+          <DarkModeToggle />
+        </div>
         {mainNavItems.map((item) => (
           <Link href={item.href} key={item.id}>
             <MenuSheetItemStyles item={item}>

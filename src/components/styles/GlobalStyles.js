@@ -9,7 +9,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
+    // CSS VARIABLES
     --max-width: 1000px;
+    --nav-drop-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);;
+    --nav-z-index: 1000;
+    --nav-sheet-z-index: 990;
     font-size: 8px;
   }
 

@@ -7,14 +7,14 @@ const MenuSheetStyles = styled(motion.div)`
   left: 1rem;
   right: 1rem;
   border-radius: 2rem;
-  background: #e2eafc;
+  background: var(--color-sheet);
   padding: 3rem 0 15rem 0;
-  z-index: -1;
   position: absolute;
+  z-index: var(--nav-sheet-z-index);
 
   ::after {
     content: '';
-    background: #abc4ff;
+    background: var(--color-accent);
     width: 8rem;
     height: 0.5rem;
     border-radius: 2px;

@@ -1,15 +1,43 @@
+const black = 'hsla(210, 73%, 8%, 1)'
+const dark = 'hsla(210, 73%, 10%, 1)'
+const offDark = 'hsla(210, 73%, 15%, 1)'
+const white = 'hsla(206, 67%, 100%, 1)'
+const light = 'hsla(206, 67%, 99%, 1)'
+const offLight = 'hsla(206, 67%, 97%, 1)'
+const darkGray = 'hsla(218, 22%, 17%, 1)'
+
 export const COLORS = {
-  text: {
-    light: 'hsl(0deg, 0%, 10%)', // white
-    dark: 'hsl(0deg, 0%, 100%)', // near-black
+  transparent: {
+    light: 'rgba(0, 0, 0, 0.05)',
+    dark: 'rgba(0, 0, 0, 0.05)',
   },
-  white: {
-    light: '#f9fafe',
-    dark: '#f9fafe',
+  text: {
+    light: offDark, // Oxford Blue Dark
+    dark: light, // white
+  },
+  'off-background': {
+    light: offLight, // almost white
+    dark: offDark, // Oxford Blue
+  },
+  'off-background-reverse': {
+    dark: offLight, // almost white
+    light: offDark, // Oxford Blue
+  },
+  navigation: {
+    light: offLight, // almost white
+    dark: black, // Oxford Blue
+  },
+  sheet: {
+    light: '#E7E6FD', // almost white
+    dark: offDark, // Oxford Blue
   },
   background: {
-    light: 'hsl(0deg, 0%, 100%)', // white
-    dark: 'hsl(250deg, 70%, 7%)', // navy navy blue
+    light, // white
+    dark, // navy navy blue
+  },
+  accent: {
+    light: '#A8A2F8',
+    dark: '#c4fff9',
   },
   primary: {
     light: 'hsl(340deg, 100%, 40%)', // Pinkish-red
