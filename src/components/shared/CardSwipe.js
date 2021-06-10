@@ -3,7 +3,6 @@ import {
   useMotionTemplate,
   useMotionValue,
   useTransform,
-  useViewportScroll,
 } from 'framer-motion'
 import { useState } from 'react'
 import styled from 'styled-components'
@@ -29,17 +28,8 @@ const CardSwipeItemStyles = styled(motion.div)`
   top: 0px;
 `
 const colors = ['#FFBE0B', '#FB5607', '#FF006E', '#8338EC', '#3A86FF']
-const randomColor = (current) => {
-  while (true) {
-    const index = Math.floor(Math.random() * colors.length)
 
-    if (current !== colors[index]) {
-      return colors[index]
-    }
-  }
-}
-
-const CardSwipeItem = ({ card, style, onDragStart, onDragEnd, animate }) => (
+const CardSwipeItem = ({ card, style, onDragEnd, animate }) => (
   <CardSwipeItemStyles
     className="card"
     drag="x"
