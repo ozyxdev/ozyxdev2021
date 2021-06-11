@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const NavContainer = styled.div`
+const NavigationMobileStyles = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
@@ -17,15 +17,14 @@ const NavContainer = styled.div`
     display: ${(props) => (props.menuOpen ? 'block' : 'none')};
   }
 
-  .controller-container {
+  .settings-container {
     display: flex;
     justify-content: flex-end;
     padding: 0 3rem 1rem;
   }
 `
 
-const NavStyles = styled.nav`
-  max-width: var(--max-width);
+const NavigationContainerStyles = styled.nav`
   background: var(--color-navigation);
   margin: 0 auto;
   padding: 2rem;
@@ -37,7 +36,7 @@ const NavStyles = styled.nav`
   box-shadow: var(--nav-drop-shadow);
 `
 
-const NavIemStyles = styled.a`
+const NavigationItemStyles = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,4 +58,8 @@ const NavIemStyles = styled.a`
   }
 `
 
-export { NavContainer, NavStyles, NavIemStyles }
+export {
+  NavigationMobileStyles,
+  NavigationContainerStyles,
+  NavigationItemStyles,
+}

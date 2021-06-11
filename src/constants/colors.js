@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const black = 'hsla(210, 73%, 8%, 1)'
 const dark = 'hsla(210, 73%, 10%, 1)'
 const offDark = 'hsla(210, 73%, 15%, 1)'
