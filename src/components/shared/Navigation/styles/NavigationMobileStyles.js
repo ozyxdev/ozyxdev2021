@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-const NavigationMobileStyles = styled.div`
+const NavigationMobileWrapper = styled.div`
+  /* hide on tablet up */
+  @media (min-width: 768px) {
+    display: none;
+  }
   position: fixed;
   bottom: 0;
   left: 0;
@@ -36,7 +40,7 @@ const NavigationContainerStyles = styled.nav`
   box-shadow: var(--nav-drop-shadow);
 `
 
-const NavigationItemStyles = styled.a`
+const NavigationItemMobileStyles = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +63,7 @@ const NavigationItemStyles = styled.a`
 `
 
 export {
-  NavigationMobileStyles,
+  NavigationMobileWrapper,
   NavigationContainerStyles,
-  NavigationItemStyles,
+  NavigationItemMobileStyles,
 }

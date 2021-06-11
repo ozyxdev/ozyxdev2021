@@ -1,7 +1,11 @@
+import { desktopNavItems } from '../../../constants/navigation'
+
 function NavigationDesktop() {
   return (
     <div>
-      <h1>Navigation</h1>
+      {desktopNavItems.map((item) => (
+        <li key={item.id}>{item.text}</li>
+      ))}
     </div>
   )
 }

@@ -3,16 +3,13 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import MenuIcon from '../icons/MenuIcon'
 import MenuSheet from './MenuSheet'
-import NavigationItem from './NavigationItem'
+import NavigationItemMobile from './NavigationItemMobile'
 import {
-  NavigationMobileStyles,
+  NavigationMobileWrapper,
   NavigationContainerStyles,
-  NavigationItemStyles,
-} from './styles/NavigationStyles'
-import {
-  mobileNavItems,
-  mainNavItems,
-} from '../../../constants/navigation-constants'
+  NavigationItemMobileStyles,
+} from './styles/NavigationMobileStyles'
+import { mobileNavItems, mainNavItems } from '../../../constants/navigation'
 import { MenuSheetItemStyles } from './styles/MenuSheetStyles'
 import Icon from '../Icon'
 import DarkModeToggle from '../DarkModeToggle'
@@ -42,7 +39,7 @@ export default function NavigationMobile() {
   }, [loaded])
 
   return (
-    <NavigationMobileStyles ref={dragConstrainRef}>
+    <NavigationMobileWrapper ref={dragConstrainRef}>
       <MenuSheet
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
@@ -63,13 +60,13 @@ export default function NavigationMobile() {
       </MenuSheet>
       <NavigationContainerStyles>
         {mobileNavItems.map((item) => (
-          <NavigationItem item={item} key={item.id} />
+          <NavigationItemMobile item={item} key={item.id} />
         ))}
-        <NavigationItemStyles onClick={toggleMenu}>
+        <NavigationItemMobileStyles onClick={toggleMenu}>
           <MenuIcon />
           <span>Menu</span>
-        </NavigationItemStyles>
+        </NavigationItemMobileStyles>
       </NavigationContainerStyles>
-    </NavigationMobileStyles>
+    </NavigationMobileWrapper>
   )
 }
