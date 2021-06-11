@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import MenuIcon from '../icons/MenuIcon'
 import MenuSheet from './MenuSheet'
-import NavigationItem from './NavigationItem'
+import NavigationItemMobile from './NavigationItemMobile'
 import {
   NavigationMobileStyles,
   NavigationContainerStyles,
-  NavigationItemStyles,
+  NavigationItemMobileStyles,
 } from './styles/NavigationStyles'
 import {
   mobileNavItems,
@@ -63,12 +63,12 @@ export default function NavigationMobile() {
       </MenuSheet>
       <NavigationContainerStyles>
         {mobileNavItems.map((item) => (
-          <NavigationItem item={item} key={item.id} />
+          <NavigationItemMobile item={item} key={item.id} />
         ))}
-        <NavigationItemStyles onClick={toggleMenu}>
+        <NavigationItemMobileStyles onClick={toggleMenu}>
           <MenuIcon />
           <span>Menu</span>
-        </NavigationItemStyles>
+        </NavigationItemMobileStyles>
       </NavigationContainerStyles>
     </NavigationMobileStyles>
   )

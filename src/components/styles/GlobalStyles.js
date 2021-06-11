@@ -50,6 +50,15 @@ const GlobalStyles = createGlobalStyle`
     height: 24px;
     width: 24px;
   }
+
+  .container-full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 `
 
 export default GlobalStyles

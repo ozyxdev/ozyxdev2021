@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+const MaxWidthContainer = styled.div`
+  max-width: var(--max-width);
+  margin: 0 auto;
+`
+
 const ContentContainer = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
@@ -14,4 +19,4 @@ const FullWidthContainer = styled.div`
   margin-left: -50vw;
   margin-right: -50vw;
 `
-export { ContentContainer, FullWidthContainer }
+export { ContentContainer, FullWidthContainer, MaxWidthContainer }
