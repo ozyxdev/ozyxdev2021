@@ -32,11 +32,11 @@ export const COLORS = {
     light: offDark, // Oxford Blue Dark
     dark: light, // white
   },
-  'off-background': {
+  offBackground: {
     light: offLight, // almost white
     dark: offDark, // Oxford Blue
   },
-  'off-background-reverse': {
+  offBackgroundReverse: {
     dark: offLight, // almost white
     light: offDark, // Oxford Blue
   },

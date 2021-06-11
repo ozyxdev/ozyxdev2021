@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'styled-normalize'
 
 const GlobalStyles = createGlobalStyle`
+  ${normalize}
+
   @font-face {
     font-family: 'radnika_next' ;
     src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
@@ -15,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     --shadow-1: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.13);
     --nav-z-index: 1000;
     --nav-sheet-z-index: 990;
+    --color-white: hsla(206, 67%, 99%, 1);
     font-size: 8px;
   }
 
