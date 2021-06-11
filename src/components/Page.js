@@ -1,20 +1,16 @@
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import Navigation from './shared/Nav/Navigation'
+import NavigationDesktop from './shared/Navigation/NavigationDesktop'
+import NavigationMobile from './shared/Navigation/NavigationMobile'
 import GlobalStyles from './styles/GlobalStyles'
-
-const InnerStyles = styled.div`
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 2rem;
-`
+import { ContentContainer } from './styles/LayoutStyles'
 
 export default function Page({ children }) {
   return (
     <>
-      <Navigation />
+      <NavigationMobile />
+      <NavigationDesktop />
       <GlobalStyles />
-      <InnerStyles>{children}</InnerStyles>
+      <ContentContainer>{children}</ContentContainer>
     </>
   )
 }

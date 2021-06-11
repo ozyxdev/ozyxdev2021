@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import ArrowCTAIcon from '../ArrowCTAIcon'
+import ArrowCTAIcon from './ArrowCTAIcon'
 
 const LinkCTAStyles = styled.a`
   display: inline-block;

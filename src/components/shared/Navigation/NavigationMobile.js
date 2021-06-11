@@ -3,24 +3,25 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import MenuIcon from '../icons/MenuIcon'
 import MenuSheet from './MenuSheet'
-import NavItem from './NavItem'
-import { NavContainer, NavStyles, NavIemStyles } from './styles/NavStyles'
+import NavigationItemMobile from './NavigationItemMobile'
 import {
-  mobileNavItems,
-  mainNavItems,
-} from '../../../constants/navigation-constants'
-import MenuSheetItemStyles from './styles/MenuSheetStyles'
+  NavigationMobileWrapper,
+  NavigationContainerStyles,
+  NavigationItemMobileStyles,
+} from './styles/NavigationMobileStyles'
+import { mobileNavItems, mainNavItems } from '../../../constants/navigation'
+import { MenuSheetItemStyles } from './styles/MenuSheetStyles'
 import Icon from '../Icon'
 import DarkModeToggle from '../DarkModeToggle'
 
-export default function Navigation() {
+export default function NavigationMobile() {
   const [menuOpen, setMenuOpen] = useState(true)
   const [loaded, setLoaded] = useState(false)
 
   const toggleMenu = (_e) => {
     setMenuOpen(!menuOpen)
   }
-  const constraintsRef = useRef(null)
+  const dragConstrainRef = useRef(null)
 
   // close menu on route change
   const router = useRouter()
@@ -35,16 +36,16 @@ export default function Navigation() {
         setMenuOpen(false)
       }
     }, 1000)
-  })
+  }, [loaded])
 
   return (
-    <NavContainer ref={constraintsRef}>
+    <NavigationMobileWrapper ref={dragConstrainRef}>
       <MenuSheet
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         toggleMenu={toggleMenu}
       >
-        <div className="controller-container">
+        <div className="settings-container">
           <DarkModeToggle />
         </div>
         {mainNavItems.map((item) => (
@@ -57,15 +58,15 @@ export default function Navigation() {
           </Link>
         ))}
       </MenuSheet>
-      <NavStyles>
+      <NavigationContainerStyles>
         {mobileNavItems.map((item) => (
-          <NavItem item={item} key={item.id} />
+          <NavigationItemMobile item={item} key={item.id} />
         ))}
-        <NavIemStyles onClick={toggleMenu}>
+        <NavigationItemMobileStyles onClick={toggleMenu}>
           <MenuIcon />
           <span>Menu</span>
-        </NavIemStyles>
-      </NavStyles>
-    </NavContainer>
+        </NavigationItemMobileStyles>
+      </NavigationContainerStyles>
+    </NavigationMobileWrapper>
   )
 }
