@@ -2,8 +2,12 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { useTheme } from '../../lib/themeState'
 
-const DarkModeSwitchStyles = styled.span`
+const DarkModeSwitchStyles = styled.div`
   padding: 0.5rem;
+
+  svg {
+    cursor: pointer;
+  }
 
   input {
     display: none;

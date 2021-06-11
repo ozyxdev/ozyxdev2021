@@ -32,7 +32,7 @@ const mainNavItems = [home, about, contact, projects, services]
 
 const mobileNavItems = [about, home, projects]
 
-const desktopNavItems = [home, about, services, projects]
+const desktopNavItems = [home, about, services, projects, contact]
 
 const socialNavItems = [
   {

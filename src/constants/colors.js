@@ -7,6 +7,22 @@ const light = 'hsla(206, 67%, 99%, 1)'
 const offLight = 'hsla(206, 67%, 97%, 1)'
 const darkGray = 'hsla(218, 22%, 17%, 1)'
 
+// LIGHT MODE
+
+// PRIMARY
+const purple = '#3f37c9'
+const purple200 = '#4895ef'
+const fieryRose = 'hsla(352, 100%, 58%, 1)'
+
+// SECONDARY
+
+// DARK MODE
+// PRIMARY
+const neonBlue = '#80ffdb'
+const neonBlue200 = '#5390d9'
+const aqua = '#56cfe1'
+// SECONDARY
+
 export const COLORS = {
   transparent: {
     light: 'rgba(0, 0, 0, 0.05)',
@@ -41,12 +57,16 @@ export const COLORS = {
     dark: '#c4fff9',
   },
   primary: {
-    light: 'hsl(340deg, 100%, 40%)', // Pinkish-red
-    dark: 'hsl(50deg, 100%, 50%)', // Yellow
+    light: purple, // Pinkish-red
+    dark: neonBlue, // Yellow
+  },
+  primary200: {
+    light: purple200, // Pinkish-red
+    dark: neonBlue200, // Yellow
   },
   secondary: {
-    light: 'hsl(250deg, 100%, 50%)', // Purplish-blue
-    dark: 'hsl(190deg, 100%, 40%)', // Cyan
+    light: fieryRose, // Purplish-blue
+    dark: aqua, // Cyan
   },
   // Grays, scaling from least-noticeable to most-noticeable
   gray300: {
