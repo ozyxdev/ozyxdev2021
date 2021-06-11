@@ -1,20 +1,17 @@
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { isMobile } from 'react-device-detect'
+import NavigationDesktop from './shared/Navigation/NavigationDesktop'
 import NavigationMobile from './shared/Navigation/NavigationMobile'
 import GlobalStyles from './styles/GlobalStyles'
-
-const InnerStyles = styled.div`
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 2rem;
-`
+import { ContentContainer } from './styles/LayoutStyles'
 
 export default function Page({ children }) {
   return (
     <>
-      <NavigationMobile />
+      {isMobile ? <NavigationMobile /> : <NavigationDesktop />}
+
       <GlobalStyles />
-      <InnerStyles>{children}</InnerStyles>
+      <ContentContainer>{children}</ContentContainer>
     </>
   )
 }
