@@ -14,11 +14,11 @@ const DarkModeSwitchStyles = styled.div`
   }
 
   circle {
-    fill: var(--color-off-background-reverse);
+    fill: var(--color-offBackgroundReverse);
   }
 
   .outline {
-    fill: var(--color-off-background-reverse);
+    fill: var(--color-offBackgroundReverse);
   }
 `
 
