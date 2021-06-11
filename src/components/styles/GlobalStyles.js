@@ -73,9 +73,9 @@ const GlobalStyles = createGlobalStyle`
   .text-gradient {
     transition: background-position 0.5s ease-out, color 0.5s ease-out;
     text-decoration: none;
-    color: var(--color-primary200);
-    background-color: var(--color-primary200);
-    background-image: linear-gradient(90deg, var(--color-primary200), var(--color-primary), var(--color-primary200));
+    color: var(--color-gradientSecond);
+    background-color: var(--color-gradientSecond);
+    background-image: linear-gradient(90deg, var(--color-gradientSecond), var(--color-gradientFirst), var(--color-gradientSecond));
     background-position: 100% 0%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -86,7 +86,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-text-fill-color: transparent;
 
     :hover {
-      color: var(--color-primary);
+      color: var(--color-gradientFirst);
       background-position: 0% 0%;
     }
   }

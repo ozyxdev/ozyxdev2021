@@ -30,7 +30,7 @@ const services = {
 }
 const mainNavItems = [home, about, contact, projects, services]
 
-const mobileNavItems = [about, home, projects]
+const mobileNavItems = [home, about, projects]
 
 const desktopNavItems = [home, about, services, projects, contact]
 

@@ -11,10 +11,14 @@ const darkGray = 'hsla(218, 22%, 17%, 1)'
 
 // PRIMARY
 const purple = '#3f37c9'
+const purple2 = '#575fcf'
 const purple200 = '#4895ef'
-const fieryRose = 'hsla(352, 100%, 58%, 1)'
 
 // SECONDARY
+const fieryRose = '#f53b57'
+const fieryRose100 = '#ef5777'
+const fieryRose200 = '#FF8091'
+const fieryRose300 = '#FF99A7'
 
 // DARK MODE
 // PRIMARY
@@ -46,7 +50,7 @@ export const COLORS = {
   },
   sheet: {
     light: '#E7E6FD', // almost white
-    dark: offDark, // Oxford Blue
+    dark: '#0F3861', // Oxford Blue
   },
   background: {
     light, // white
@@ -54,10 +58,10 @@ export const COLORS = {
   },
   accent: {
     light: '#A8A2F8',
-    dark: '#c4fff9',
+    dark: '#6DFDEF',
   },
   primary: {
-    light: purple, // Pinkish-red
+    light: purple2, // Pinkish-red
     dark: neonBlue, // Yellow
   },
   primary200: {
@@ -80,6 +84,16 @@ export const COLORS = {
   gray700: {
     light: 'hsl(0deg, 0%, 30%)',
     dark: 'hsl(0deg, 0%, 70%)',
+  },
+
+  // gradients
+  gradientFirst: {
+    light: purple,
+    dark: neonBlue,
+  },
+  gradientSecond: {
+    light: purple200,
+    dark: neonBlue200,
   },
 }
 
