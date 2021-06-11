@@ -38,6 +38,15 @@ const NavigationContainerStyles = styled.nav`
   position: relative;
   z-index: var(--nav-z-index);
   box-shadow: var(--nav-drop-shadow);
+
+  ::before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background: var(--color-navigation);
+  }
 `
 
 const NavigationItemMobileStyles = styled.a`

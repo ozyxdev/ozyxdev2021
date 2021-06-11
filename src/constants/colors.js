@@ -46,7 +46,7 @@ export const COLORS = {
   },
   sheet: {
     light: '#E7E6FD', // almost white
-    dark: offDark, // Oxford Blue
+    dark: '#0F3861', // Oxford Blue
   },
   background: {
     light, // white
@@ -54,7 +54,7 @@ export const COLORS = {
   },
   accent: {
     light: '#A8A2F8',
-    dark: '#c4fff9',
+    dark: '#6DFDEF',
   },
   primary: {
     light: purple, // Pinkish-red
