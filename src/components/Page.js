@@ -3,6 +3,7 @@ import NavigationDesktop from './shared/Navigation/NavigationDesktop'
 import NavigationMobile from './shared/Navigation/NavigationMobile'
 import GlobalStyles from './styles/GlobalStyles'
 import { ContentContainer } from './styles/LayoutStyles'
+import TypographyStyles from './styles/Typography'
 
 export default function Page({ children }) {
   return (
@@ -10,6 +11,7 @@ export default function Page({ children }) {
       <NavigationMobile />
       <NavigationDesktop />
       <GlobalStyles />
+      <TypographyStyles />
       <ContentContainer>{children}</ContentContainer>
     </>
   )

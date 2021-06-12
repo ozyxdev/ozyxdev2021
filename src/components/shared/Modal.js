@@ -14,13 +14,12 @@ const ModalStyles = styled.div`
 
   .modal-container {
     position: fixed;
-    top: calc(50% - 10rem);
+    bottom: 15rem;
     border-radius: 3rem 3rem 3rem 3rem;
     box-sizing: border-box;
     padding: 4rem;
     margin: auto;
     width: calc(100% - 4rem);
-    height: calc(50% - 4rem);
     background: var(--color-primary);
     transform-origin: top right;
   }
@@ -32,7 +31,7 @@ const modalAnimation = {
     y: 0,
   },
 }
-function Modal({ isModalOpen }) {
+function Modal({ isModalOpen, children }) {
   console.log('isModalOpen', isModalOpen)
   return (
     <ModalStyles>
@@ -42,7 +41,7 @@ function Modal({ isModalOpen }) {
         animate={isModalOpen ? 'visible' : 'hidden'}
         variants={modalAnimation}
       >
-        <h1>Modal</h1>
+        {children}
       </motion.div>
     </ModalStyles>
   )
