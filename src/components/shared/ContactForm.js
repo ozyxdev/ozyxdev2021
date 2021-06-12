@@ -10,16 +10,25 @@ const ContactFormStyles = styled(FormStyles)`
   fieldset {
     color: var(--color-offBackgroundReverse);
   }
+
+  .cta {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      justify-self: flex-end;
+    }
+  }
 `
 
 function ContactForm({ setModalOpen }) {
   const { inputs, handleChange, resetForm } = useForm({
     email: '',
-    password: '',
-    name: '',
+    message: '',
   })
 
   async function handleSubmit(e) {
+    console.dir(inputs)
     e.preventDefault()
     setModalOpen(false)
     resetForm()
@@ -53,10 +62,12 @@ function ContactForm({ setModalOpen }) {
             onChange={handleChange}
           />
         </label>
-        <ButtonPrimary type="submit">
-          <span>Send</span>
-          <ContactIcon fill />
-        </ButtonPrimary>
+        <div className="cta">
+          <ButtonPrimary type="submit">
+            <span>Send</span>
+            <ContactIcon fill />
+          </ButtonPrimary>
+        </div>
       </fieldset>
     </ContactFormStyles>
   )

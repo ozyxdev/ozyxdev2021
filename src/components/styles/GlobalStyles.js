@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --nav-sheet-z-index: 900;
     --color-white: hsla(206, 67%, 99%, 1);
     --color-transparent: rgba(0, 0, 0, 0.05);
-    --color-transparent2: rgba(0, 0, 0, 0.2);
+    --color-transparent2: rgba(0, 0, 0, 0.1);
     font-size: 8px;
   }
 
@@ -38,6 +38,10 @@ const GlobalStyles = createGlobalStyle`
     line-height: 2;
     background: var(--color-background);
     color: var(--color-text);
+  }
+
+  body.modal-open {
+    overflow: hidden;
   }
 
   *,

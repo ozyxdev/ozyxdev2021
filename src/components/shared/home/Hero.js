@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import PenIcon from '../icons/PenIcon'
 import StickyCTA from '../StickyCTA'
@@ -13,6 +13,9 @@ const HeroStyles = styled.div`
 
 function Hero() {
   const [isModalOpen, setModalOpen] = useState(false)
+  useEffect(() => {
+    document.body.classList.toggle('modal-open', isModalOpen)
+  }, [isModalOpen])
   return (
     <HeroStyles>
       <h1>Home</h1>

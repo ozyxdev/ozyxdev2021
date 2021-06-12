@@ -100,6 +100,12 @@ export const COLORS = {
     light: purple200,
     dark: seaBlue,
   },
+
+  // states
+  danger: {
+    light: fieryRose100,
+    dark: fieryRose200,
+  },
 }
 
 export const COLOR_MODE_KEY = 'color-mode'
