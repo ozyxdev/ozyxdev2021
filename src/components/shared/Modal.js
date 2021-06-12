@@ -1,40 +1,51 @@
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 
 const ModalStyles = styled.div`
-  /* position: fixed;
-  top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.05);
-  display: flex; */
-
   .modal-container {
+    z-index: var(--modal-z-index);
     position: fixed;
     bottom: 15rem;
-    border-radius: 3rem 3rem 3rem 3rem;
+    border-radius: 2rem;
     box-sizing: border-box;
-    padding: 4rem;
+    padding: 2rem;
     margin: auto;
     width: calc(100% - 4rem);
-    background: var(--color-primary);
+    background: var(--color-modal);
     transform-origin: top right;
   }
 `
-const duration = 0.3
+
+const ModalBackdropStyles = styled.div`
+  position: fixed;
+  display: ${(props) => (props.isModalOpen ? 'block' : 'none')};
+  /* top: 0;
+  left: 0; */
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--color-transparent2);
+  z-index: var(--modal-z-index);
+`
 const modalAnimation = {
   hidden: { y: '-100vh' },
   visible: {
     y: 0,
   },
 }
-function Modal({ isModalOpen, children }) {
-  console.log('isModalOpen', isModalOpen)
+function Modal({ isModalOpen, setModalOpen, children }) {
   return (
     <ModalStyles>
+      <ModalBackdropStyles
+        isModalOpen={isModalOpen}
+        role="button"
+        tabIndex="0"
+        aria-label="Dismiss modal"
+        onClick={() => setModalOpen(!isModalOpen)}
+      />
       <motion.div
         className="modal-container"
         initial="hidden"

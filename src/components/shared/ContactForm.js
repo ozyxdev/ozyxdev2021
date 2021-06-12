@@ -1,6 +1,18 @@
+import styled from 'styled-components'
 import useForm from '../../lib/useForm'
+import { ButtonPrimary } from '../styles/Button'
+import FormStyles from '../styles/FormStyles'
+import ContactIcon from './icons/ContactIcon'
 
-function ContactForm() {
+const ContactFormStyles = styled(FormStyles)`
+  padding: 1.5rem;
+  h3,
+  fieldset {
+    color: var(--color-offBackgroundReverse);
+  }
+`
+
+function ContactForm({ setModalOpen }) {
   const { inputs, handleChange, resetForm } = useForm({
     email: '',
     password: '',
@@ -9,13 +21,13 @@ function ContactForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    console.log(`${e.target.value}`)
+    setModalOpen(false)
     resetForm()
   }
 
   return (
-    <form method="POST" onSubmit={handleSubmit}>
-      <h2>Contact</h2>
+    <ContactFormStyles method="POST" onSubmit={handleSubmit}>
+      <h3>Contact</h3>
 
       <fieldset>
         <label htmlFor="email">
@@ -31,8 +43,9 @@ function ContactForm() {
         </label>
         <label htmlFor="message">
           Message
-          <input
-            type="text"
+          <textarea
+            rows="5"
+            id="message"
             name="message"
             autoComplete="message"
             placeholder="Your message"
@@ -40,9 +53,12 @@ function ContactForm() {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Contact</button>
+        <ButtonPrimary type="submit">
+          <span>Send</span>
+          <ContactIcon fill />
+        </ButtonPrimary>
       </fieldset>
-    </form>
+    </ContactFormStyles>
   )
 }
 
