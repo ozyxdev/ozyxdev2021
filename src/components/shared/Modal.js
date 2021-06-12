@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
@@ -31,10 +31,11 @@ const ModalBackdropStyles = styled.div`
   z-index: var(--modal-z-index);
 `
 const modalAnimation = {
-  hidden: { y: '-100vh' },
+  hidden: { x: '-100vh' },
   visible: {
-    y: 0,
+    x: 0,
   },
+  exit: { x: '100vh', transition: { delay: 0.3, duration: 0.3 } },
 }
 function Modal({ isModalOpen, setModalOpen, children }) {
   return (
@@ -46,14 +47,19 @@ function Modal({ isModalOpen, setModalOpen, children }) {
         aria-label="Dismiss modal"
         onClick={() => setModalOpen(!isModalOpen)}
       />
-      <motion.div
-        className="modal-container"
-        initial="hidden"
-        animate={isModalOpen ? 'visible' : 'hidden'}
-        variants={modalAnimation}
-      >
-        {children}
-      </motion.div>
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="modal-container"
+            initial="hidden"
+            animate={isModalOpen ? 'visible' : 'hidden'}
+            exit="exit"
+            variants={modalAnimation}
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </ModalStyles>
   )
 }

@@ -12,7 +12,7 @@ const HeroStyles = styled.div`
 `
 
 function Hero() {
-  const [isModalOpen, setModalOpen] = useState(true)
+  const [isModalOpen, setModalOpen] = useState(false)
   return (
     <HeroStyles>
       <h1>Home</h1>
