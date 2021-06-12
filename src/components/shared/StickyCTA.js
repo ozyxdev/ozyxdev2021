@@ -41,38 +41,43 @@ const StickyCTAStyles = styled.div`
   }
 
   [data-is-visible='true'] {
-    top: 0;
-    left: 0;
-    visibility: visible;
+    button {
+      top: 0;
+      left: 0;
+      visibility: visible;
+    }
   }
 
   [data-is-visible='false'] {
-    grid-gap: 0;
-    padding: 1.5rem;
-    position: fixed;
-    left: calc(100% - 8rem);
-    top: 2rem;
+    button {
+      grid-gap: 0;
+      padding: 1.5rem;
+      position: fixed;
+      left: calc(100% - 8rem);
+      top: 2rem;
+    }
     span {
       display: none;
       visibility: hidden;
+      background: red;
     }
   }
 `
 
-function StickyCTA() {
+function StickyCTA({ children }) {
   const ref = useRef()
   const isVisible = useOnScreen(ref)
-  console.log('isVisible', isVisible)
   return (
     <StickyCTAStyles>
-      <div className="sticky-cta-wrapper">
+      <div className="sticky-cta-wrapper" data-is-visible={isVisible}>
         <div ref={ref} className="ref" />
-        <Link href="/contact">
-          <button type="button" data-is-visible={isVisible}>
+        {children}
+        {/* <button type="button">
+          <>
             <span>Get in touch</span>
             <PenIcon fill />
-          </button>
-        </Link>
+          </>
+        </button> */}
       </div>
     </StickyCTAStyles>
   )
