@@ -22,16 +22,17 @@ const fieryRose300 = '#FF99A7'
 
 // DARK MODE
 // PRIMARY
-const neonBlue = '#80ffdb'
-const neonBlue200 = '#5390d9'
+// const neonBlue = '#80ffdb'
+const neonBlue = 'hsla(174, 100%, 48%, 1)'
+const neonBlue100 = 'hsla(174, 100%, 58%, 1)'
+const neonBlue200 = 'hsla(174, 97%, 73%, 1)'
+const neonBlue300 = 'hsla(174, 97%, 86%, 1)'
+
+const seaBlue = '#5390d9'
 const aqua = '#56cfe1'
 // SECONDARY
 
 export const COLORS = {
-  transparent: {
-    light: 'rgba(0, 0, 0, 0.05)',
-    dark: 'rgba(0, 0, 0, 0.05)',
-  },
   text: {
     light: offDark, // Oxford Blue Dark
     dark: light, // white
@@ -52,13 +53,17 @@ export const COLORS = {
     light: '#E7E6FD', // almost white
     dark: '#0F3861', // Oxford Blue
   },
+  modal: {
+    light: offLight, // almost white
+    dark: '#0F3861', // Oxford Blue
+  },
   background: {
     light, // white
     dark, // navy navy blue
   },
   accent: {
     light: '#A8A2F8',
-    dark: '#6DFDEF',
+    dark: neonBlue300,
   },
   primary: {
     light: purple2, // Pinkish-red
@@ -66,7 +71,7 @@ export const COLORS = {
   },
   primary200: {
     light: purple200, // Pinkish-red
-    dark: neonBlue200, // Yellow
+    dark: seaBlue, // Yellow
   },
   secondary: {
     light: fieryRose, // Purplish-blue
@@ -93,7 +98,13 @@ export const COLORS = {
   },
   gradientSecond: {
     light: purple200,
-    dark: neonBlue200,
+    dark: seaBlue,
+  },
+
+  // states
+  danger: {
+    light: fieryRose100,
+    dark: fieryRose200,
   },
 }
 

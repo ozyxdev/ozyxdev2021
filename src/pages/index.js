@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import StickyCTA from '../components/shared/StickyCTA'
+import Hero from '../components/shared/home/Hero'
 
 const FakeContent = styled.div`
   background: var(--color-offBackground);
@@ -17,8 +17,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Home</h1>
-        <StickyCTA />
+        <Hero />
+
         {[1, 2, 3, 4, 5].map((item) => (
           <FakeContent key={item} />
         ))}

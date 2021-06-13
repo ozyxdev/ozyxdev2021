@@ -18,13 +18,10 @@ export default function MenuSheet({
 
   const modifyTarget = (_target) => {
     const delta = dragStart - sheetRef.current.getBoundingClientRect().top
-    console.log('delta', delta)
     if (delta > 40) {
-      console.log(`open`)
       setMenuOpen(true)
       return -menuSheetHeight
     }
-    console.log(`close`)
     setMenuOpen(false)
     return 0
   }

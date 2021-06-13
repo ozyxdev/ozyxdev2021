@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const NavigationMobileWrapper = styled.div`
   /* hide on tablet up */
+  z-index: var(--content-z-index);
   @media (min-width: 768px) {
     display: none;
   }
@@ -36,7 +37,7 @@ const NavigationContainerStyles = styled.nav`
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
-  z-index: var(--nav-z-index);
+  z-index: var(--nav-container-z-index);
   box-shadow: var(--nav-drop-shadow);
 
   ::before {
